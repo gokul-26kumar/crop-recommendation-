@@ -27,16 +27,6 @@ newproject/
 └── requirements.txt                # Python dependencies
 
 
-🛠️ Installation
-- Clone the repository:
-git clone https://github.com/yourusername/newproject.git
-cd newproject
-- Install dependencies:
-pip install -r requirements.txt
-- Run the Flask app:
-python app.py
-
-
 🌐 Web Pages
 - index.html: Landing page
 - login.html / signup.html: User authentication
