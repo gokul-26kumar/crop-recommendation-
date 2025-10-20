@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About</title>
+    <!-- <link rel="stylesheet" href="about.css" /> -->
+
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+/* navigation */
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  
+}
+
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-section {
+  padding: 50px 0;
+  background-color: rgba(49, 53, 52, 0.8);
+  text-align: center;
+  color: #faf9f9;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  color: #fffefe;
+  text-decoration: underline 2px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 20px 0;
+  color: #faf9f9;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+body.bimg {
+  background-image: url("{{ url_for('static', filename='image/about_bng.jpeg') }} " );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+}
+.hero_title {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: -0.05em;
+  padding: 20px;
+
+  background-color: rgba(49, 53, 52, 0.8);
+  color: aliceblue;
+  margin: 200px 350px;
+  border: rgba(14, 83, 14, 0.362) 50px solid;
+
+  cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero_title:hover{
+    transform: scale(1.1);
+    background-color: rgba(49, 53, 52, 0.8);
+    
+
+}
+
+
+section.About_topic{
+    color: #fff;
+    padding: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    
+}
+ul.abc {
+    list-style-type: square;
+    
+
+}
+section ul a{
+    text-decoration: none;
+    color: rgb(198, 198, 175);
+    
+}
+
+button
+
+
+
+/* container */
+
+div.Nitrogen {
+  margin: 10px 10px;
+  padding: 90px;
+}
+div.phosphorus {
+  margin: 10px 10px;
+  padding: 90px;
+}
+div.Potassium {
+  margin: 10px 10px;
+  padding: 90px;
+}
+div.Rainfall {
+  margin: 10px 10px;
+  padding: 90px;
+}
+div.Temperature {
+  margin: 10px 10px;
+  padding: 90px;
+}
+div.pH {
+  margin: 10px 10px;
+  padding: 90px;
+}
+div.Humidity {
+  margin: 10px 10px;
+  padding: 90px;
+}
+
+/* img.nitrogen_img {
+  width: 500px;
+  padding: 20px;
+  margin: 100px 10px;
+} */
+
+img.about_img {
+  width: 500px;
+  padding: 20px;
+  margin: 100px 10px;
+}
+
+.About_container {
+  display: flex;
+  margin: 10px;
+  padding: 50px;
+}
+
+/* footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+    </style>
+  </head>
+    <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="{{ url_for('predict') }}">Prediction</a></li>
+          <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <section class="hero container">
+        <body class="bimg" >
+          
+        
+          <button class="hero_title"> Agricultural Intelligence</button> 
+             </body>
+    </section>
+
+      <section class="About_topic">
+        <ul class="abc">
+            <a href="#Nitrogen"> <li >Nitrogen</li></a>
+            <a href="#phosphorus"> <li>phosphorus</li></a>
+            <a href="#Potassium"><li>Potassium</li></a> 
+            <a href="#Temperature"><li>Temperature</li></a> 
+            <a href="#pH"> <li>pH</li></a> 
+            <a href="#Humidity"> <li>Humidity</li></a> 
+            <a href="#Rainfall"> <li>Rainfall</li></a> 
+        </ul>
+      </section>
+
+    <section class="about-section">
+      <section class="About_container">
+
+            
+                <img src="{{ url_for('static', filename='image/nitrogen.jpg') }}" alt="abc" class="about_img">
+            
+
+            <div id="Nitrogen" class="Nitrogen">
+                    <h1>Nitrogen</h1>
+                    <p>
+                    Nitrogen is a key nutrient in crop recommendation systems as it
+                    directly impacts plant growth and productivity. The nitrogen values in
+                    such systems are used to determine the optimal fertilizer application
+                    rates, ensuring that crops receive sufficient nutrients without
+                    leading to environmental issues like soil degradation or water
+                    contamination. Generally, nitrogen levels in the soil are measured in
+                    parts per million (ppm) or kilograms per hectare (kg/ha).
+                    </p>
+                    <ul>
+                    <li>Low Nitrogen Levels:</li>
+                    <p>
+                        Below 20 ppm (or < 50 kg/ha) Insufficient for most crops, and
+                        fertilizer application is often required.
+                    </p>
+                    <li>Moderate Nitrogen Levels:</li>
+                    <p>
+                        20 to 40 ppm (or 50 to 100 kg/ha) Suitable for some crops but may
+                        still require supplementation, depending on the crop's nitrogen
+                        requirements.
+                    </p>
+                    <li>Optimal Nitrogen Levels:</li>
+                    <p>
+                        40 to 60 ppm (or 100 to 150 kg/ha) Sufficient for many crops,
+                        leading to healthy growth and good yields.
+                    </p>
+                    <li>High Nitrogen Levels:</li>
+                    <p>
+                        Above 60 ppm (or > 150 kg/ha) May lead to excessive vegetative
+                        growth at the expense of yield, or cause nitrogen
+                        leaching and pollution.
+                    </p>
+                    </ul>
+            </div>
+        </section>
+
+        <section class="About_container">
+
+          <img src="{{ url_for('static', filename='image/Phosphorus.jpg') }}" alt="abc" class="about_img">
+
+            <div id="phosphorus" class="phosphorus">
+                    <h1>Phosphorus</h1>
+                    <p>
+                    In a crop recommendation system, the phosphorus (P) levels are crucial
+                    for determining the suitability of soil for specific crops. Phosphorus
+                    values typically refer to the available phosphorus in the soil,
+                    measured in parts per million (ppm). The recommended phosphorus levels
+                    vary based on crop requirements and soil types.
+                    </p>
+                    <ul>
+                    <li>Low Phosphorus (Deficient):</li>
+                    <p>
+                        Less than 10 ppm (often below 5 ppm is considered very low) This
+                        level is typically insufficient for most crops, and phosphorus
+                        fertilization is necessary.
+                    </p>
+                    <li>Moderate Phosphorus:</li>
+                    <p>
+                        10–20 ppm This is considered an adequate range for many crops, but
+                        for phosphorus-hungry crops, additional fertilization might still be
+                        beneficial.
+                    </p>
+                    <li>High Phosphorus:</li>
+                    <p>
+                        20–40 ppm Soils in this range are generally well-supplied with
+                        phosphorus and may not need additional phosphorus fertilization,
+                        depending on the crop.
+                    </p>
+                    <li>Very High Phosphorus:</li>
+                    <p>
+                        Above 40 ppm At these levels, phosphorus is typically more than
+                        sufficient, and further phosphorus application may not improve crop
+                        yield. In fact, excess phosphorus can lead to environmental issues
+                        like water pollution through runoff.
+                    </p>
+                    </ul>
+            </div>
+        </section>
+
+        <section class="About_container">
+
+            <img src="{{ url_for('static', filename='image/potassium.jpg') }}" alt="abc" class="about_img">
+            <div id="Potassium" class="Potassium">
+                <h1>Potassium</h1>
+                <p>
+                In a crop recommendation system, potassium (K) levels are crucial for
+                plant health and productivity. Potassium helps in various
+                physiological functions such as water regulation, enzyme activation,
+                and photosynthesis. The optimal levels of potassium can vary depending
+                on the type of soil, crop type, and region.
+                </p>
+                <ul>
+                    <li>Low Potassium Levels:</li>
+                    <p>Less than 60 mg/kg (or ppm)</p>
+                    <li>Medium Potassium Levels:</li>
+                    <p>60 - 120 mg/kg</p>
+                    <li>High Potassium Levels:</li>
+                    <p>More than 120 mg/kg</p>
+                </ul>
+             </div>
+        </section>
+
+        <section class="About_container">
+
+            
+            <img src="{{ url_for('static', filename='image/temp.jpg') }}" alt="abc" class="about_img">
+            <div id ="Temperature" class="Temperature">
+                <h1>Temperature</h1>
+                <ul>
+                <li>Cool-Season Crops:</li>
+                <p>
+                    Optimal growing temperature: 10°C to 20°C (50°F to 68°F) Temperature
+                    below 0°C may damage the plants, while above 30°C can inhibit
+                    growth.
+                </p>
+                <li>Warm-Season Crops :</li>
+                <p>
+                    Optimal growing temperature: 20°C to 30°C (68°F to 86°F)
+                    Temperatures below 10°C can slow down growth, while temperatures
+                    above 35°C can cause stress and reduce yields.
+                </p>
+                <li>Tropical Crops :</li>
+                <p>
+                    Optimal growing temperature: 25°C to 35°C (77°F to 95°F) These crops
+                    thrive in warmer conditions and may be adversely affected by
+                    temperatures below 15°C or above 40°C.
+                </p>
+                <li>Heat-Resistant Crops :</li>
+                <p>
+                    Can tolerate temperatures up to 40°C (104°F) or even
+                    slightly higher.
+                </p>
+                </ul>
+            </div>
+        </section>
+
+        <section class="About_container">
+
+            
+            <img src="{{ url_for('static', filename='image/pH.jpg') }}" alt="abc" class="about_img">
+                <div id="pH" class="pH">
+                    <h1>pH</h1>
+                    <p>
+                    In a crop recommendation system, the pH value of the soil is a
+                    critical input parameter. Depending on the pH value, the system
+                    suggests crops that will thrive in that specific soil condition,
+                    helping farmers select the most suitable crops or implement soil
+                    amendments to adjust the pH for their desired crops.
+                    </p>
+                    <ul>
+                    <li>Acidic soil (pH 4.5–6.5):</li>
+                    <p>
+                        Crops like potatoes, blueberries, cranberries, and sweet potatoes
+                        prefer more acidic conditions.
+                    </p>
+                    <li>Neutral to slightly acidic soil (pH 6.0–7.0):</li>
+                    <p>
+                        Most crops, such as corn, wheat, rice, tomatoes, carrots, and beans,
+                        grow best in this range.
+                    </p>
+                    <li>Alkaline soil (pH 7.0–8.5):</li>
+                    <p>
+                        Crops like spinach, beets, broccoli, and cabbage can tolerate more
+                        alkaline conditions.
+                    </p>
+                    </ul>
+                </div>
+        </section>
+
+        <section class="About_container">
+
+            
+            <img src="{{ url_for('static', filename='image/humudity.jpg') }}" alt="abc" class="about_img">
+
+            <div id="Humidity" class="Humidity">
+                <h1>Humidity</h1>
+                <ul>
+                <li>Low Humidity:</li>
+                <p>
+                    Below 40% (suitable for dry land crops like cacti, or
+                    drought-tolerant crops such as sorghum).
+                </p>
+                <li>Moderate Humidity:</li>
+                <p>
+                    40% - 70% (suitable for a wide range of crops, including grains,
+                    vegetables, and fruits).
+                </p>
+                <li>High Humidity:</li>
+                <p>
+                    Above 70% (suitable for tropical crops like rice, bananas, and
+                    certain vegetables).
+                </p>
+                </ul>
+            </div>
+        </section>
+
+        <section class="About_container">
+
+            
+            <img src="{{ url_for('static', filename='image/rainfall.jpg') }}" alt="abc" class="about_img">
+
+            <div id="Rainfall" class="Rainfall">
+                <h1>Rainfall</h1>
+                <ul>
+                <li>Low Rainfall:</li>
+                <p>
+                    Less than 250 mm per year. Suitable for drought-resistant crops.
+                    Moderate Rainfall: Between 250 mm and 750 mm per year. Suitable for
+                    a wide range of crops, including many staple crops.
+                </p>
+                <li>High Rainfall:</li>
+                <p>
+                    More than 750 mm per year. Ideal for crops that require a lot of
+                    water but might need management to prevent water logging or erosion.
+                </p>
+                </ul>
+            </div>
+
+        </section>
+    </section>
+
+  </body>
+</html>

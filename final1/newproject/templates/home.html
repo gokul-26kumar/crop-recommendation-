@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="home.css"> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        line-height: 1.6;
+      }
+
+      header {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* .header_link {
+  text-decoration: none;
+  color: black;
+} */
+
+      body.bimg {
+        background-image: url("{{ url_for('static', filename='image/img1.jpg') }}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      .traspace {
+        margin: 30px;
+      }
+
+      /*  hero section */
+      .hero {
+        margin: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero_title {
+        font-size: 4rem;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: -0.05em;
+        padding: 20px;
+
+        background-color: rgba(49, 53, 52, 0.8);
+        color: aliceblue;
+        margin: 200px 50px;
+        border: rgba(49, 53, 52, 0.8) 5px solid;
+
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .hero_title:hover {
+        transform: scale(1.1);
+        background-color: rgba(49, 53, 52, 0.8);
+      }
+
+      .hero_dis {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 1rem 0rem;
+        margin: 0 50px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        text-transform: ;
+      }
+
+      .About_conteiner {
+        padding: 100px 50px;
+        background-color: rgba(49, 53, 52, 0.8);
+        color: #fcf9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header class="header conteiner">
+        <nav>
+          <ul>
+            <li>
+              <a class="header_link" href="{{ url_for('home') }}">Home</a>
+            </li>
+            <li>
+              <a class="header_link" href="{{ url_for('about') }}">About</a>
+            </li>
+            <li>
+              <a class="header_link" href="{{ url_for('predict') }}"
+                >Prediction
+              </a>
+            </li>
+            <li>
+              <a class="header_link" href="{{ url_for('logout') }}">Logout</a>
+            </li>
+            <!-- <li><a class="header_link" href="">Analysis </a></li> -->
+          </ul>
+        </nav>
+      </header>
+    </section>
+
+    <section class="hero conteiner">
+      <body class="bimg">
+        <button class="hero_title">Agricultural Intelligence</button>
+      </body>
+    </section>
+
+    <section class="About_conteiner">
+      <p class="hero_dis">
+        In the realm of agriculture, the optimization of crop selection is
+        pivotal for enhancing productivity and ensuring sustainability. The Crop
+        Recommendation Project aims to develop a data-driven system that aids
+        farmers in choosing the most suitable crops based on specific
+        environmental and economic conditions. Utilizing a combination of
+        machine learning algorithms and comprehensive datasets—encompassing soil
+        characteristics, climate data, and market trends—the project delivers
+        tailored recommendations to maximize yield and profitability. The system
+        analyses factors such as soil pH, moisture levels, temperature, rainfall
+        patterns, and historical crop performance. By integrating these
+        variables, it generates precise crop suggestions that align with local
+        conditions and market demands. This project approach not only supports decision-making for individual farmers but also promotes sustainable
+        agricultural practices and resource management. Early implementations
+        have demonstrated significant improvements in crop yields and economic
+        returns, showcasing the potential of this technology to revolutionize
+        modern farming practices.
+      </p>
+    </section>
+  </body>
+</html>
